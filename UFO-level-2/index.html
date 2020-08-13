@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="utf-8" http-equiv="encoding">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Finding UFO</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
+</head>
+
+<body>    
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <marquee direction="right"  scrollamount="15" scrolldelay="10">
+                <div class="navbar-brand" style = " color: white;">UFO Sightings</div> 
+            </marquee>
+         </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <br><br><br><br>
+            <div class="boxed search-box">
+              <h4><strong>Filter Search</strong></h4>   
+            <form id="form-date">
+              <div class="form-group">
+                <label for="UFO-form1">Date</label>
+                <input class="form-control" id="UFO-form-date" name="UFO-form" type="text" placeholder="e.g. 1/13/2010">
+              </div>
+            </form>
+            <form id="form-country">
+              <div class="form-group">
+                <label for="UFO-form2">Country</label>
+                <input class="form-control" id="UFO-form-country" name="UFO-form" type="text" placeholder="e.g. us">
+              </div>
+            </form>
+            <form id="form-shape">
+              <div class="form-group">
+                <label for="UFO-form3">Shape</label>
+                <input class="form-control" id="UFO-form-shape" name="UFO-form" type="text" placeholder="e.g. circle">
+              </div>
+              <button id="button" type="button" class="btn btn-default">Filter Table</button>
+            </form>
+            </div>
+          </div>
+          <div class="col-md-9 text-center">
+            <h1>Filtered Data Summary</h1>
+            <ul class="summary"></ul>
+            <div id="table-area">
+                <table id="ufo-table" class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th class="table-head">Date</th>
+                      <th class="table-head">City</th>
+                      <th class="table-head">State</th>
+                      <th class="table-head">Country</th>
+                      <th class="table-head">Shape</th>
+                      <th class="table-head">Duration</th>
+                      <th class="table-head">Comments</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    <script src="static/data.js"></script>
+    <script src="static/app.js"></script>
+</body>
+</html>
+
