@@ -38,7 +38,15 @@ function runEnter() {
   
     // Filter based on the user filter:
 
-   filtered_data = tableData.filter(ufo => ufo.datetime == date);
+    function date_filter(ufo){
+      if (date!=""){
+        return ufo.datetime === date;
+      }else{
+        return true;
+      }
+    }
+
+    filtered_data = tableData.filter(date_filter);
     
     filtered_data.forEach((ufo) => {
         var row = table.append("tr");
